@@ -32,4 +32,13 @@
         Me.Close()
     End Sub
 
+    Private Sub PictureBox1_Click(sender As System.Object, e As System.EventArgs) Handles PictureBox1.Click
+        UsernameTextBox.Text = "edy"
+        PasswordTextBox.Text = "99"
+    End Sub
+
+    Private Sub LoginForm_Load(sender As Object, e As System.EventArgs) Handles Me.Load
+        UsernameTextBox.Text = "edy"
+        PasswordTextBox.Text = "99"
+    End Sub
 End Class

@@ -112,6 +112,12 @@
     <Compile Include="Catalogo\catalogo_consulta_externa_agregar.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Catalogo\frm_sel_proveedor.Designer.vb">
+      <DependentUpon>frm_sel_proveedor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogo\frm_sel_proveedor.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Catalogo\Medicos.Designer.vb">
       <DependentUpon>Medicos.vb</DependentUpon>
     </Compile>
@@ -164,6 +170,30 @@
       <DependentUpon>Imprimir_documento.vb</DependentUpon>
     </Compile>
     <Compile Include="compras\Imprimir_documento.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="compras\Ordenes\frm_Ocompra_nuevo.Designer.vb">
+      <DependentUpon>frm_Ocompra_nuevo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="compras\Ordenes\frm_Ocompra_nuevo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="compras\Ordenes\frm_Ocompra_relacion.Designer.vb">
+      <DependentUpon>frm_Ocompra_relacion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="compras\Ordenes\frm_Ocompra_relacion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="compras\Ordenes\Ocompra_Impresion.Designer.vb">
+      <DependentUpon>Ocompra_Impresion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="compras\Ordenes\Ocompra_Impresion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="compras\Ordenes\seleccionar_producto.Designer.vb">
+      <DependentUpon>seleccionar_producto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="compras\Ordenes\seleccionar_producto.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="compras\Relacion_de_entradas.Designer.vb">
@@ -233,6 +263,11 @@
     </Compile>
     <Compile Include="compras\Recepcion_de_Mercancia.vb">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrdenesDS.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OrdenesDS.xsd</DependentUpon>
     </Compile>
     <Compile Include="recetas\hojadeentrega.Designer.vb">
       <DependentUpon>hojadeentrega.vb</DependentUpon>
@@ -440,6 +475,9 @@
     <EmbeddedResource Include="Catalogo\catalogo_consulta_externa_agregar.resx">
       <DependentUpon>catalogo_consulta_externa_agregar.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Catalogo\frm_sel_proveedor.resx">
+      <DependentUpon>frm_sel_proveedor.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Catalogo\Medicos.resx">
       <SubType>Designer</SubType>
       <DependentUpon>Medicos.vb</DependentUpon>
@@ -471,6 +509,19 @@
       <DependentUpon>Imprimir_documento.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="compras\ENTRADA.rdlc" />
+    <EmbeddedResource Include="compras\Ordenes\frm_Ocompra_nuevo.resx">
+      <DependentUpon>frm_Ocompra_nuevo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="compras\Ordenes\frm_Ocompra_relacion.resx">
+      <DependentUpon>frm_Ocompra_relacion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="compras\Ordenes\Ocompra_Impresion.resx">
+      <DependentUpon>Ocompra_Impresion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="compras\Ordenes\OrdendeCompra.rdlc" />
+    <EmbeddedResource Include="compras\Ordenes\seleccionar_producto.resx">
+      <DependentUpon>seleccionar_producto.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="compras\Relacion_de_entradas.resx">
       <DependentUpon>Relacion_de_entradas.vb</DependentUpon>
     </EmbeddedResource>
@@ -658,9 +709,17 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="clinica.mdb">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    <None Include="OrdenesDS.xsc">
+      <DependentUpon>OrdenesDS.xsd</DependentUpon>
+    </None>
+    <None Include="OrdenesDS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>OrdenesDS.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="OrdenesDS.xss">
+      <DependentUpon>OrdenesDS.xsd</DependentUpon>
+    </None>
     <None Include="Resources\logo verde_mediano.jpg" />
     <None Include="Resources\logo verde_chico.jpg" />
     <None Include="nubedataset.xsc">
@@ -757,6 +816,7 @@
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

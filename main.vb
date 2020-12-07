@@ -189,9 +189,7 @@ Public Class main
     End Sub
 
     Private Sub TestToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles TestToolStripMenuItem.Click
-        Dim frm As New surtido_subir_nube
-        frm.Show()
-
+        Ocompra_Impresion.Show()
     End Sub
 
     Private Sub PROVEEDORESToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles PROVEEDORESToolStripMenuItem.Click
@@ -204,7 +202,7 @@ Public Class main
 
     End Sub
 
-    Private Sub PreparaTomaDeInevntarioToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles PreparaTomaDeInevntarioToolStripMenuItem.Click
+    Private Sub PreparaTomaDeInevntarioToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs)
         Dim frm As New Inventario_Fisico
         frm.ShowDialog()
     End Sub
@@ -242,4 +240,17 @@ Public Class main
     End Sub
 
    
+    Private Sub PreparaTomaDeInevntarioToolStripMenuItem_Click_1(sender As System.Object, e As System.EventArgs) Handles PreparaTomaDeInevntarioToolStripMenuItem.Click
+
+    End Sub
+
+    Private Sub OnrdenesDeCompraToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles OnrdenesDeCompraToolStripMenuItem.Click
+        Dim frm As New frm_Ocompra_relacion
+        frm.ShowDialog()
+    End Sub
+
+    Private Sub NuevaOrdenToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles NuevaOrdenToolStripMenuItem.Click
+        Dim frm As New frm_Ocompra_nuevo
+        frm.ShowDialog()
+    End Sub
 End Class

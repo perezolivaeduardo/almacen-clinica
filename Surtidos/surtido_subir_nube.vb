@@ -24,8 +24,6 @@
         & "GROUP BY #[fecha1]#, areas.area, inv_movimientos.id_producto, Productos.Descripcion " _
         & "ORDER BY Productos.Descripcion"
 
-
-
         sql = sql.Replace("[fecha]", Format(fecha, "MM/dd/yyyy"))
         sql = sql.Replace("[fecha1]", Format(fecha1, "MM/dd/yyyy"))
 
@@ -41,7 +39,6 @@
             ProgresBar.Value = j
             Me.Refresh()
         Next
-
         MsgBox("Terminado")
     End Sub
 

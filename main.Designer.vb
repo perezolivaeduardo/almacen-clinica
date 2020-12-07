@@ -49,6 +49,7 @@ Partial Class main
         Me.CalcularExistenciaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CapturaDeInventariosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator4 = New System.Windows.Forms.ToolStripSeparator()
+        Me.PreparaTomaDeInevntarioToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripButton5 = New System.Windows.Forms.ToolStripDropDownButton()
         Me.ComprasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.NuevaEntradaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -67,10 +68,11 @@ Partial Class main
         Me.RegistrarSalidaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripButton6 = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripDropDownButton1 = New System.Windows.Forms.ToolStripDropDownButton()
-        Me.PreparaTomaDeInevntarioToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.OnrdenesDeCompraToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
         Me.lbl_usuario = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.NuevaOrdenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStrip1.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -81,7 +83,7 @@ Partial Class main
         Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton4, Me.ToolStripButton1, Me.ToolStripButton2, Me.ToolStripButton3, Me.ToolStripSplitButton1, Me.ToolStripLabel1, Me.ToolStripButton5, Me.ToolStripButton6, Me.ToolStripDropDownButton1})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Size = New System.Drawing.Size(1064, 39)
+        Me.ToolStrip1.Size = New System.Drawing.Size(1191, 39)
         Me.ToolStrip1.TabIndex = 0
         Me.ToolStrip1.Text = "Inventarios"
         '
@@ -209,7 +211,7 @@ Partial Class main
         '
         'ToolStripLabel1
         '
-        Me.ToolStripLabel1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.KARDEXToolStripMenuItem, Me.ToolStripSeparator3, Me.ListaParaInventarioToolStripMenuItem, Me.CrearHojaDeInventarioToolStripMenuItem, Me.CalcularExistenciaToolStripMenuItem, Me.CapturaDeInventariosToolStripMenuItem, Me.ToolStripSeparator4})
+        Me.ToolStripLabel1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.KARDEXToolStripMenuItem, Me.ToolStripSeparator3, Me.ListaParaInventarioToolStripMenuItem, Me.CrearHojaDeInventarioToolStripMenuItem, Me.CalcularExistenciaToolStripMenuItem, Me.CapturaDeInventariosToolStripMenuItem, Me.ToolStripSeparator4, Me.PreparaTomaDeInevntarioToolStripMenuItem})
         Me.ToolStripLabel1.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ToolStripLabel1.Image = Global.Almacen.My.Resources.Resources.Note_Book
         Me.ToolStripLabel1.Name = "ToolStripLabel1"
@@ -219,42 +221,48 @@ Partial Class main
         'KARDEXToolStripMenuItem
         '
         Me.KARDEXToolStripMenuItem.Name = "KARDEXToolStripMenuItem"
-        Me.KARDEXToolStripMenuItem.Size = New System.Drawing.Size(240, 24)
+        Me.KARDEXToolStripMenuItem.Size = New System.Drawing.Size(259, 24)
         Me.KARDEXToolStripMenuItem.Text = "KARDEX"
         '
         'ToolStripSeparator3
         '
         Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
-        Me.ToolStripSeparator3.Size = New System.Drawing.Size(237, 6)
+        Me.ToolStripSeparator3.Size = New System.Drawing.Size(256, 6)
         '
         'ListaParaInventarioToolStripMenuItem
         '
         Me.ListaParaInventarioToolStripMenuItem.Name = "ListaParaInventarioToolStripMenuItem"
-        Me.ListaParaInventarioToolStripMenuItem.Size = New System.Drawing.Size(240, 24)
+        Me.ListaParaInventarioToolStripMenuItem.Size = New System.Drawing.Size(259, 24)
         Me.ListaParaInventarioToolStripMenuItem.Text = "Lista para inventario"
         '
         'CrearHojaDeInventarioToolStripMenuItem
         '
         Me.CrearHojaDeInventarioToolStripMenuItem.Name = "CrearHojaDeInventarioToolStripMenuItem"
-        Me.CrearHojaDeInventarioToolStripMenuItem.Size = New System.Drawing.Size(240, 24)
+        Me.CrearHojaDeInventarioToolStripMenuItem.Size = New System.Drawing.Size(259, 24)
         Me.CrearHojaDeInventarioToolStripMenuItem.Text = "Crear Hoja de Inventario"
         '
         'CalcularExistenciaToolStripMenuItem
         '
         Me.CalcularExistenciaToolStripMenuItem.Name = "CalcularExistenciaToolStripMenuItem"
-        Me.CalcularExistenciaToolStripMenuItem.Size = New System.Drawing.Size(240, 24)
+        Me.CalcularExistenciaToolStripMenuItem.Size = New System.Drawing.Size(259, 24)
         Me.CalcularExistenciaToolStripMenuItem.Text = "Calcular Existencia"
         '
         'CapturaDeInventariosToolStripMenuItem
         '
         Me.CapturaDeInventariosToolStripMenuItem.Name = "CapturaDeInventariosToolStripMenuItem"
-        Me.CapturaDeInventariosToolStripMenuItem.Size = New System.Drawing.Size(240, 24)
+        Me.CapturaDeInventariosToolStripMenuItem.Size = New System.Drawing.Size(259, 24)
         Me.CapturaDeInventariosToolStripMenuItem.Text = "Captura de Inventarios"
         '
         'ToolStripSeparator4
         '
         Me.ToolStripSeparator4.Name = "ToolStripSeparator4"
-        Me.ToolStripSeparator4.Size = New System.Drawing.Size(237, 6)
+        Me.ToolStripSeparator4.Size = New System.Drawing.Size(256, 6)
+        '
+        'PreparaTomaDeInevntarioToolStripMenuItem
+        '
+        Me.PreparaTomaDeInevntarioToolStripMenuItem.Name = "PreparaTomaDeInevntarioToolStripMenuItem"
+        Me.PreparaTomaDeInevntarioToolStripMenuItem.Size = New System.Drawing.Size(259, 24)
+        Me.PreparaTomaDeInevntarioToolStripMenuItem.Text = "Prepara toma de Inevntario"
         '
         'ToolStripButton5
         '
@@ -366,19 +374,18 @@ Partial Class main
         '
         'ToolStripDropDownButton1
         '
-        Me.ToolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.ToolStripDropDownButton1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PreparaTomaDeInevntarioToolStripMenuItem})
+        Me.ToolStripDropDownButton1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OnrdenesDeCompraToolStripMenuItem, Me.NuevaOrdenToolStripMenuItem})
         Me.ToolStripDropDownButton1.Image = CType(resources.GetObject("ToolStripDropDownButton1.Image"), System.Drawing.Image)
         Me.ToolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ToolStripDropDownButton1.Name = "ToolStripDropDownButton1"
-        Me.ToolStripDropDownButton1.Size = New System.Drawing.Size(45, 36)
-        Me.ToolStripDropDownButton1.Text = "ToolStripDropDownButton1"
+        Me.ToolStripDropDownButton1.Size = New System.Drawing.Size(108, 36)
+        Me.ToolStripDropDownButton1.Text = "COMPRAS"
         '
-        'PreparaTomaDeInevntarioToolStripMenuItem
+        'OnrdenesDeCompraToolStripMenuItem
         '
-        Me.PreparaTomaDeInevntarioToolStripMenuItem.Name = "PreparaTomaDeInevntarioToolStripMenuItem"
-        Me.PreparaTomaDeInevntarioToolStripMenuItem.Size = New System.Drawing.Size(217, 22)
-        Me.PreparaTomaDeInevntarioToolStripMenuItem.Text = "Prepara toma de Inevntario"
+        Me.OnrdenesDeCompraToolStripMenuItem.Name = "OnrdenesDeCompraToolStripMenuItem"
+        Me.OnrdenesDeCompraToolStripMenuItem.Size = New System.Drawing.Size(187, 22)
+        Me.OnrdenesDeCompraToolStripMenuItem.Text = "Onrdenes de Compra"
         '
         'Button1
         '
@@ -395,7 +402,7 @@ Partial Class main
         Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.lbl_usuario})
         Me.StatusStrip1.Location = New System.Drawing.Point(0, 488)
         Me.StatusStrip1.Name = "StatusStrip1"
-        Me.StatusStrip1.Size = New System.Drawing.Size(1064, 22)
+        Me.StatusStrip1.Size = New System.Drawing.Size(1191, 22)
         Me.StatusStrip1.TabIndex = 4
         Me.StatusStrip1.Text = "StatusStrip1"
         '
@@ -405,11 +412,17 @@ Partial Class main
         Me.lbl_usuario.Size = New System.Drawing.Size(12, 17)
         Me.lbl_usuario.Text = "-"
         '
+        'NuevaOrdenToolStripMenuItem
+        '
+        Me.NuevaOrdenToolStripMenuItem.Name = "NuevaOrdenToolStripMenuItem"
+        Me.NuevaOrdenToolStripMenuItem.Size = New System.Drawing.Size(187, 22)
+        Me.NuevaOrdenToolStripMenuItem.Text = "Nueva Orden"
+        '
         'main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1064, 510)
+        Me.ClientSize = New System.Drawing.Size(1191, 510)
         Me.Controls.Add(Me.StatusStrip1)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.ToolStrip1)
@@ -467,11 +480,13 @@ Partial Class main
     Friend WithEvents PROVEEDORESToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ReporteDeEntradasToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ToolStripDropDownButton1 As System.Windows.Forms.ToolStripDropDownButton
-    Friend WithEvents PreparaTomaDeInevntarioToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents StatusStrip1 As System.Windows.Forms.StatusStrip
     Friend WithEvents lbl_usuario As System.Windows.Forms.ToolStripStatusLabel
     Friend WithEvents BitacoraToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents VerInfoToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents PreparaTomaDeInevntarioToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents OnrdenesDeCompraToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents NuevaOrdenToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 
 End Class
