@@ -189,7 +189,9 @@ Public Class main
     End Sub
 
     Private Sub TestToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles TestToolStripMenuItem.Click
-        Ocompra_Impresion.Show()
+        Dim fecha As Date
+        fecha = Now.Date.AddDays(-1)
+        surtido_subir_nube.Show()
     End Sub
 
     Private Sub PROVEEDORESToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles PROVEEDORESToolStripMenuItem.Click

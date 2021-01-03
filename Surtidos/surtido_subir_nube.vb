@@ -9,8 +9,9 @@
         Dim adap As New nubedatasetTableAdapters.alm_surtidosTableAdapter
 
         Dim fecha1 As Date = fecha
-        If fecha.DayOfWeek = DayOfWeek.Sunday Or Me.fecha.Value.ToShortDateString = CDate("25/12/2019") Then
+        If fecha.DayOfWeek = DayOfWeek.Sunday Or Me.fecha.Value.ToShortDateString = CDate("25/12/2020") Then
             fecha = fecha.AddDays(-1)
+            MsgBox("Modo navidad")
         End If
 
         adap.Eliminar_surtidosXFecha(fecha1.ToShortDateString) 'borra surtido del dia si es que hay , si es de sabado pone periodo y todo lo pone con fecha de domingo, de igual forma si borre se borra desde domingo

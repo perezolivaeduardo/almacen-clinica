@@ -48,12 +48,15 @@ Public Class solicitud_nueva
 
 
         'si es sabado o 24 de diciembre no sube el surtido a la nube
-        If Me.DateTimePicker1.Value.DayOfWeek <> DayOfWeek.Saturday Then
+        Dim navidad As Date = "24/12/2020"
+        If Me.DateTimePicker1.Value.DayOfWeek <> DayOfWeek.Saturday And Me.DateTimePicker1.Value.Date <> navidad Then
             status.Text = "Cargando Tabletas...." : Me.Refresh()
             StatusStrip1.Refresh() : Me.Refresh()
             surtido_subir_nube.subir_surtido_nube(DateTimePicker1.Value.ToShortDateString)
             status.Text = "Tabletas cargadas, Trabajo Termindao ...." : Me.Refresh()
             StatusStrip1.Refresh() : Me.Refresh()
+        Else
+            MsgBox("No se cargaron tabletas")
         End If
 
 
