@@ -36,13 +36,24 @@
     <Setting Name="csnube" Type="(Connection string)" Scope="Application">
       <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
 &lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
-  &lt;ConnectionString&gt;Data Source=CBESERVER\SQLEXPRESS;Initial Catalog=clinica;Integrated Security=False;User ID=sa;Password=Integral2016;MultipleActiveResultSets=False;Connect Timeout=180;Encrypt=False;TrustServerCertificate=False&lt;/ConnectionString&gt;
+  &lt;ConnectionString&gt;Data Source=CBESERVER\SQLEXPRESS;Initial Catalog=clinica;User ID=sa;Password=Integral2016&lt;/ConnectionString&gt;
   &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
-      <Value Profile="(Default)">Data Source=CBESERVER\SQLEXPRESS;Initial Catalog=clinica;Integrated Security=False;User ID=sa;Password=Integral2016;MultipleActiveResultSets=False;Connect Timeout=180;Encrypt=False;TrustServerCertificate=False</Value>
+      <Value Profile="(Default)">Data Source=CBESERVER\SQLEXPRESS;Initial Catalog=clinica;User ID=sa;Password=Integral2016</Value>
+    </Setting>
+    <Setting Name="azureCS" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=serverclinicaesperanza.database.windows.net;Initial Catalog=clinica;User ID=eduardo;Password=Integral#2020&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=serverclinicaesperanza.database.windows.net;Initial Catalog=clinica;User ID=eduardo;Password=Integral#2020</Value>
     </Setting>
     <Setting Name="cadenaNube" Type="System.String" Scope="User">
-      <Value Profile="(Default)">Data Source=CBESERVER\SQLEXPRESS;Initial Catalog=clinica;Integrated Security=False;User ID=sa;Password=Integral2016;MultipleActiveResultSets=False;Connect Timeout=180;Encrypt=False;TrustServerCertificate=False</Value>
+      <Value Profile="(Default)">Data Source=CBESERVER\SQLEXPRESS;Initial Catalog=clinica;User ID=sa;Password=Integral2016</Value>
+    </Setting>
+    <Setting Name="cadenaNubeLocal" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Data Source=MATRIX\SQLSERVER12;Initial Catalog=clinica;User ID=sa;Password=integral</Value>
     </Setting>
   </Settings>
 </SettingsFile>

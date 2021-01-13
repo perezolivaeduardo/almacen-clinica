@@ -7,6 +7,7 @@ Public Class Stock_por__Area
 
     Public Sub cargar_area(ByVal area As Integer)
         'TODO: esta línea de código carga datos en la tabla 'clinicaDataSet.sql_alma_stocks' Puede moverla o quitarla según sea necesario.
+        clinicaDataSet.EnforceConstraints = False
         Me.sql_alma_stocksTableAdapter.FillByarea(Me.clinicaDataSet.sql_alma_stocks, area)
         Me.ReportViewer1.RefreshReport()
     End Sub

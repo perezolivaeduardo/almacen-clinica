@@ -15,7 +15,7 @@ Namespace My
                 My.Settings.Save()
             End If
 
-            If e.PropertyName.Equals("cadenaNueb") Then
+            If e.PropertyName.Equals("cadenaNube") Then
                 Me("csnube") = cadenaNube
                 My.Settings.Save()
             End If

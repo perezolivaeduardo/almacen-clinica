@@ -31,6 +31,7 @@ Public Class main
             If ix = MsgBoxResult.Yes Then
                 fileini = My.Computer.FileSystem.SpecialDirectories.MyDocuments + "\clinica_local.ini"
                 modo_local = True
+                My.Settings.cadenaNube = My.Settings.cadenaNubeLocal
             End If
         End If
 

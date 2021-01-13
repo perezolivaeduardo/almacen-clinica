@@ -104,11 +104,11 @@ Module sdk_inventarios
         If periodo = Periodos.mes_anterior Then fn_periodo = periodo_mes_anterior()
     End Function
 
-    Function cobalsky(ByVal msg As String) As Boolean
+    Function cobalsky(ByVal msg As String, ByVal tipo As String) As Boolean
         Dim adap_bitacora As New clinicaDataSetTableAdapters.bitacoraTableAdapter
         Try
             'bitacora
-            adap_bitacora.Insert(Now, user_id, "Almacen", Left(msg, 254), 0)
+            adap_bitacora.Insert(Now, user_id, tipo, Left(msg, 254), 0)
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try

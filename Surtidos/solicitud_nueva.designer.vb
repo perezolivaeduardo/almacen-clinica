@@ -38,6 +38,9 @@ Partial Class solicitud_nueva
         Me.status = New System.Windows.Forms.ToolStripStatusLabel()
         Me.dgvce = New System.Windows.Forms.DataGridView()
         Me.Label3 = New System.Windows.Forms.Label()
+        Me.inicial = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.final = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.finalfinal = New System.Windows.Forms.ToolStripStatusLabel()
         Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.Panel2.SuspendLayout()
         Me.SplitContainer1.SuspendLayout()
@@ -71,7 +74,7 @@ Partial Class solicitud_nueva
         'SplitContainer1.Panel2
         '
         Me.SplitContainer1.Panel2.Controls.Add(Me.SplitContainer2)
-        Me.SplitContainer1.Size = New System.Drawing.Size(766, 421)
+        Me.SplitContainer1.Size = New System.Drawing.Size(775, 436)
         Me.SplitContainer1.SplitterDistance = 40
         Me.SplitContainer1.TabIndex = 0
         '
@@ -79,7 +82,7 @@ Partial Class solicitud_nueva
         '
         Me.LinkLabel1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.LinkLabel1.AutoSize = True
-        Me.LinkLabel1.Location = New System.Drawing.Point(583, 27)
+        Me.LinkLabel1.Location = New System.Drawing.Point(592, 27)
         Me.LinkLabel1.Name = "LinkLabel1"
         Me.LinkLabel1.Size = New System.Drawing.Size(183, 13)
         Me.LinkLabel1.TabIndex = 6
@@ -140,7 +143,7 @@ Partial Class solicitud_nueva
         'SplitContainer2.Panel2
         '
         Me.SplitContainer2.Panel2.Controls.Add(Me.SplitContainer3)
-        Me.SplitContainer2.Size = New System.Drawing.Size(766, 377)
+        Me.SplitContainer2.Size = New System.Drawing.Size(775, 392)
         Me.SplitContainer2.SplitterDistance = 192
         Me.SplitContainer2.TabIndex = 0
         '
@@ -162,8 +165,8 @@ Partial Class solicitud_nueva
         Me.SplitContainer3.Panel2.Controls.Add(Me.StatusStrip1)
         Me.SplitContainer3.Panel2.Controls.Add(Me.dgvce)
         Me.SplitContainer3.Panel2.Controls.Add(Me.Label3)
-        Me.SplitContainer3.Size = New System.Drawing.Size(766, 377)
-        Me.SplitContainer3.SplitterDistance = 188
+        Me.SplitContainer3.Size = New System.Drawing.Size(775, 392)
+        Me.SplitContainer3.SplitterDistance = 195
         Me.SplitContainer3.TabIndex = 1
         '
         'Label2
@@ -188,13 +191,13 @@ Partial Class solicitud_nueva
         Me.dgvdetalle.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvdetalle.Location = New System.Drawing.Point(3, 20)
         Me.dgvdetalle.Name = "dgvdetalle"
-        Me.dgvdetalle.Size = New System.Drawing.Size(760, 166)
+        Me.dgvdetalle.Size = New System.Drawing.Size(769, 173)
         Me.dgvdetalle.TabIndex = 0
         '
         'btn_consulta_externa
         '
         Me.btn_consulta_externa.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btn_consulta_externa.Location = New System.Drawing.Point(688, 137)
+        Me.btn_consulta_externa.Location = New System.Drawing.Point(697, 145)
         Me.btn_consulta_externa.Name = "btn_consulta_externa"
         Me.btn_consulta_externa.Size = New System.Drawing.Size(75, 23)
         Me.btn_consulta_externa.TabIndex = 5
@@ -203,10 +206,10 @@ Partial Class solicitud_nueva
         '
         'StatusStrip1
         '
-        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.status})
-        Me.StatusStrip1.Location = New System.Drawing.Point(0, 163)
+        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.status, Me.inicial, Me.final, Me.finalfinal})
+        Me.StatusStrip1.Location = New System.Drawing.Point(0, 171)
         Me.StatusStrip1.Name = "StatusStrip1"
-        Me.StatusStrip1.Size = New System.Drawing.Size(766, 22)
+        Me.StatusStrip1.Size = New System.Drawing.Size(775, 22)
         Me.StatusStrip1.TabIndex = 4
         Me.StatusStrip1.Text = "StatusStrip1"
         '
@@ -228,7 +231,7 @@ Partial Class solicitud_nueva
         Me.dgvce.Location = New System.Drawing.Point(7, 17)
         Me.dgvce.Name = "dgvce"
         Me.dgvce.ReadOnly = True
-        Me.dgvce.Size = New System.Drawing.Size(756, 122)
+        Me.dgvce.Size = New System.Drawing.Size(765, 122)
         Me.dgvce.TabIndex = 3
         '
         'Label3
@@ -240,11 +243,29 @@ Partial Class solicitud_nueva
         Me.Label3.TabIndex = 2
         Me.Label3.Text = "Consulta externa"
         '
+        'inicial
+        '
+        Me.inicial.Name = "inicial"
+        Me.inicial.Size = New System.Drawing.Size(10, 17)
+        Me.inicial.Text = "i"
+        '
+        'final
+        '
+        Me.final.Name = "final"
+        Me.final.Size = New System.Drawing.Size(11, 17)
+        Me.final.Text = "f"
+        '
+        'finalfinal
+        '
+        Me.finalfinal.Name = "finalfinal"
+        Me.finalfinal.Size = New System.Drawing.Size(15, 17)
+        Me.finalfinal.Text = "ff"
+        '
         'solicitud_nueva
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(766, 421)
+        Me.ClientSize = New System.Drawing.Size(775, 436)
         Me.Controls.Add(Me.SplitContainer1)
         Me.Name = "solicitud_nueva"
         Me.Text = "CREAR SURTIDOS"
@@ -282,4 +303,7 @@ Partial Class solicitud_nueva
     Friend WithEvents status As System.Windows.Forms.ToolStripStatusLabel
     Friend WithEvents LinkLabel1 As System.Windows.Forms.LinkLabel
     Friend WithEvents btn_consulta_externa As System.Windows.Forms.Button
+    Friend WithEvents inicial As System.Windows.Forms.ToolStripStatusLabel
+    Friend WithEvents final As System.Windows.Forms.ToolStripStatusLabel
+    Friend WithEvents finalfinal As System.Windows.Forms.ToolStripStatusLabel
 End Class

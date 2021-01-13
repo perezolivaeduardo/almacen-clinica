@@ -140,26 +140,48 @@ Namespace My
         <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=CBESERVER\SQLEXPRESS;Initial Catalog=clinica;Integrated Security=Fals"& _ 
-            "e;User ID=sa;Password=Integral2016;MultipleActiveResultSets=False;Connect Timeou"& _ 
-            "t=180;Encrypt=False;TrustServerCertificate=False")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=CBESERVER\SQLEXPRESS;Initial Catalog=clinica;User ID=sa;Password=Inte"& _ 
+            "gral2016")>  _
         Public ReadOnly Property csnube() As String
             Get
                 Return CType(Me("csnube"),String)
             End Get
         End Property
         
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=serverclinicaesperanza.database.windows.net;Initial Catalog=clinica;U"& _ 
+            "ser ID=eduardo;Password=Integral#2020")>  _
+        Public ReadOnly Property azureCS() As String
+            Get
+                Return CType(Me("azureCS"),String)
+            End Get
+        End Property
+        
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=CBESERVER\SQLEXPRESS;Initial Catalog=clinica;Integrated Security=Fals"& _ 
-            "e;User ID=sa;Password=Integral2016;MultipleActiveResultSets=False;Connect Timeou"& _ 
-            "t=180;Encrypt=False;TrustServerCertificate=False")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=CBESERVER\SQLEXPRESS;Initial Catalog=clinica;User ID=sa;Password=Inte"& _ 
+            "gral2016")>  _
         Public Property cadenaNube() As String
             Get
                 Return CType(Me("cadenaNube"),String)
             End Get
             Set
                 Me("cadenaNube") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=MATRIX\SQLSERVER12;Initial Catalog=clinica;User ID=sa;Password=integr"& _ 
+            "al")>  _
+        Public Property cadenaNubeLocal() As String
+            Get
+                Return CType(Me("cadenaNubeLocal"),String)
+            End Get
+            Set
+                Me("cadenaNubeLocal") = value
             End Set
         End Property
     End Class

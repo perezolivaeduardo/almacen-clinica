@@ -81,7 +81,7 @@
         While motivo.Length = 0
             motivo = InputBox(user_nombre + ", cual es el motivo para eliminar el registro ", "Eliminar registro")
         End While
-        cobalsky(f + " Motivo: " + motivo + " Fecha : " + Now.ToString)
+        cobalsky(f + " Motivo: " + motivo + " Fecha : " + Now.ToString, "Almacen")
         Inv_recepcion_mercanciaBindingSource.RemoveCurrent()
         Me.Inv_recepcion_mercanciaTableAdapter.Update(Me.ClinicaDataSet.inv_recepcion_mercancia)
     End Sub

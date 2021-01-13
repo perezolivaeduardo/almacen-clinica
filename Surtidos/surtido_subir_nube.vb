@@ -9,12 +9,12 @@
         Dim adap As New nubedatasetTableAdapters.alm_surtidosTableAdapter
 
         Dim fecha1 As Date = fecha
-        If fecha.DayOfWeek = DayOfWeek.Sunday Or Me.fecha.Value.ToShortDateString = CDate("25/12/2020") Then
+        If fecha.DayOfWeek = DayOfWeek.Sunday Or Me.fecha.Value.ToShortDateString = CDate("24/12/2020") Then
             fecha = fecha.AddDays(-1)
-            MsgBox("Modo navidad")
+            ' MsgBox("Modo navidad")
         End If
 
-        adap.Eliminar_surtidosXFecha(fecha1.ToShortDateString) 'borra surtido del dia si es que hay , si es de sabado pone periodo y todo lo pone con fecha de domingo, de igual forma si borre se borra desde domingo
+        adap.Eliminar_surtidosXFecha(Format(fecha1.Date)) 'borra surtido del dia si es que hay , si es de sabado pone periodo y todo lo pone con fecha de domingo, de igual forma si borre se borra desde domingo
         adap.Eliminar_surtidosXFecha(fecha.ToShortDateString) 'borra surtido del dia si es que hay , si es de sabado pone periodo y todo lo pone con fecha de domingo, de igual forma si borre se borra desde domingo
 
         Dim sql As String
@@ -29,10 +29,8 @@
         sql = sql.Replace("[fecha1]", Format(fecha1, "MM/dd/yyyy"))
 
         Dim tbl As DataTable
-
         tbl = leer_tabla(sql)
         ProgresBar.Maximum = tbl.Rows.Count
-
         For j As Integer = 0 To tbl.Rows.Count - 1
             With tbl.Rows(j)
                 adap.Insert(.Item(0), .Item(1), .Item(2), .Item(3), .Item(4), CSng(.Item(5)), False, "", False, False)
@@ -50,8 +48,12 @@
     End Sub
 
     Private Sub surtido_subir_nube_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
-        'TODO: esta línea de código carga datos en la tabla 'Nubedataset.alm_surtidos' Puede moverla o quitarla según sea necesario.
-        Me.Alm_surtidosTableAdapter.Fill(Me.Nubedataset.alm_surtidos)
+        lblcadena.Text = My.Settings.csnube.ToString
 
+    End Sub
+
+    Private Sub btn_ver_Click(sender As System.Object, e As System.EventArgs) Handles btn_ver.Click
+        'TODO: esta línea de código carga datos en la tabla 'Nubedataset.alm_surtidos' Puede moverla o quitarla según sea necesario.
+        Me.Alm_surtidosTableAdapter.FillByfecha(Me.Nubedataset.alm_surtidos, fecha.Value)
     End Sub
 End Class
